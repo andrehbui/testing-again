@@ -25,4 +25,4 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           path: ./.github/actions/looker-validation
       - name: Test run private action
-        uses: ./.github/actions/my-private-repo/my-action
+        uses: ./.github/actions/looker-validation/looker-validation
