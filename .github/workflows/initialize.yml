@@ -18,6 +18,11 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@
+        with:
+          repository: andrehbui/looker-validation
+          ref: v0.0.1
+          token: ${{ secrets.ACCESS_TOKEN }}
+          path: ./.github/actions/looker-validation
       - name: Test run private action
-        uses: andrehbui/looker-validation@v0.0.1
+        uses: ./.github/actions/my-private-repo/my-action
