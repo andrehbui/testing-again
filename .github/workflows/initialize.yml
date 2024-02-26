@@ -24,5 +24,9 @@ jobs:
           ref: v0.0.1
           token: ${{ secrets.ACCESS_TOKEN }}
           path: ./.github/actions/looker-validation
-      - name: Test run private action
-        uses: ./.github/actions/looker-validation/looker-validation
+      - name: Check some stuff
+        run: |
+          cd .github/actions/looker-validation
+          ls
+#      - name: Test run private action
+#        uses: ./.github/actions/looker-validation/looker-validation
