@@ -29,6 +29,7 @@ jobs:
           cd .github/actions/looker-validation
           ls
       - name: Test run private action
+        id: greetings
         uses: ./.github/actions/looker-validation/
         with:
           name: 'Goofus'
