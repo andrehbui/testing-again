@@ -32,3 +32,6 @@ jobs:
         uses: ./.github/actions/looker-validation/
         with:
           name: 'Goofus'
+      - name: Test phrase
+        run: |
+          echo ${{ steps.greetings.outputs.phrase }}
