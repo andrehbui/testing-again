@@ -28,5 +28,5 @@ jobs:
         run: |
           cd .github/actions/looker-validation
           ls
-#      - name: Test run private action
-#        uses: ./.github/actions/looker-validation/looker-validation
+      - name: Test run private action
+        uses: ./.github/actions/looker-validation/
