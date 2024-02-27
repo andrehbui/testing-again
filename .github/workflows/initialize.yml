@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: andrehbui/looker-validation
-          ref: v0.0.2
+          ref: v0.0.3
           token: ${{ secrets.ACCESS_TOKEN }}
           path: ./.github/actions/looker-validation
       - name: Check some stuff
@@ -33,6 +33,14 @@ jobs:
         uses: ./.github/actions/looker-validation/
         with:
           name: 'Goofus'
+          branch: ${{ github.ref_name }}
+          project: 'testing'
       - name: Test phrase
         run: |
           echo ${{ steps.greetings.outputs.phrase }}
+      - name: Test project
+        run: |
+          echo ${{ steps.greetings.outputs.project }}
+      - name: Test branch
+        run: |
+          echo ${{ steps.greetings.outputs.branch }}
