@@ -32,7 +32,6 @@ jobs:
         id: greetings
         uses: ./.github/actions/looker-validation/
         with:
-          name: 'Goofus'
           branch: ${{ github.head_ref }}
           project: 'testing'
       - name: Test phrase
