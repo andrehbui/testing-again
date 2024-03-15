@@ -34,9 +34,6 @@ jobs:
         with:
           branch: ${{ github.head_ref }}
           project: 'testing'
-      - name: Test phrase
-        run: |
-          echo ${{ steps.greetings.outputs.phrase }}
       - name: Test project
         run: |
           echo ${{ steps.greetings.outputs.project }}
